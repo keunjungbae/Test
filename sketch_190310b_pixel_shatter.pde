@@ -28,7 +28,7 @@ void setup(){
    
       c = color(r, g, b);
       
-      particles.add(new Particle(new PVector(x, y),c)); // pixel arralylist x,y all access
+      particles.add(new Particle(new PVector(x, y),c)); 
       
       
     }
@@ -49,7 +49,7 @@ void draw() {
   image(img, 0, 0);
   
   
-  for (int i = particles.size()-1; i >= 0; i--){ // reverse, all particle array access
+  for (int i = particles.size()-1; i >= 0; i--){ 
     Particle p = particles.get(i);
     p.update();
     p.display();
@@ -87,7 +87,7 @@ class Player {
   void update(){
     velocity.add(acceleration);
     location.add(velocity);
-    if(location.x < width/2  || location.x > width-10){ // 10 = half ball size for edge <--subtract
+    if(location.x < width/2  || location.x > width-10){ 
       velocity.x = velocity.x * -1;
       acceleration.x = random(-0.1,0.1);
     }
